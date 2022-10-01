@@ -45,7 +45,8 @@
                android:layout_height="wrap_content"
                android:layout_marginStart="10dp"
                android:layout_marginEnd="5dp"
-               android:layout_marginBottom="10dp" />
+               android:layout_marginBottom="10dp"
+               android:max="100"/>
 
 
        </LinearLayout>
@@ -68,11 +69,12 @@
             android:textSize="20sp" />
 
         <SeekBar
+            android:id="@+id/SeekBarIos"
             android:layout_width="264dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="5dp"
-            />
+            android:max="100"/>
     </LinearLayout>
     <LinearLayout
             android:layout_width="wrap_content"
@@ -91,13 +93,13 @@
                 android:textSize="20sp"
                 />
 
-            <SeekBar
-                android:layout_width="264dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="18dp"
-                android:layout_marginEnd="5dp"
-
-                />
+        <SeekBar
+            android:id="@+id/SeekBarFlutter"
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:max="100"
+            android:layout_marginEnd="5dp" />
     </LinearLayout>
     </LinearLayout>
 
@@ -125,11 +127,12 @@
             android:orientation="horizontal"
 
             android:layout_gravity="center">
+
             <CheckBox
+                android:id="@+id/arabic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                />
+                android:layout_marginStart="10dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -138,20 +141,24 @@
                 android:textSize="18sp"
                 android:layout_marginEnd="16dp"
                 />
+
             <CheckBox
+                android:id="@+id/french"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="French"
                 android:layout_marginEnd="16dp"
+                android:text="French"
                 android:textColor="@color/colorPrimaryDark"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <CheckBox
+                android:id="@+id/english"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -187,11 +194,12 @@
             android:orientation="horizontal"
 
             android:layout_gravity="center">
+
             <CheckBox
+                android:id="@+id/music"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                />
+                android:layout_marginStart="10dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -200,9 +208,11 @@
                 android:textSize="18sp"
                 android:layout_marginEnd="16dp"
                 />
+
             <CheckBox
+                android:id="@+id/sport"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -211,9 +221,11 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 />
+
             <CheckBox
+                android:id="@+id/games"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

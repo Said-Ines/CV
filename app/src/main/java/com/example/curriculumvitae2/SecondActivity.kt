@@ -14,11 +14,14 @@ const val EMAIL = "EMAIL"
 const val AGE = "age"
 const val GENDER = "GENDER"
 
-class SecondActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity()
+{
     private var fullName : TextInputEditText? = null
     private var email : TextInputEditText? = null
     private var age : TextInputEditText? = null
+
     private var btnNext : Button? = null
+
     private var male : RadioButton? = null
     private var female : RadioButton? = null
 
@@ -54,10 +57,13 @@ class SecondActivity : AppCompatActivity() {
     {
         if(validate())
         {
-            var nAme = "NONE"
-            var aGe = "NONE"
-            var eMail = "NONE"
-            var gEnder = "NONE"
+
+            var nAme = fullName?.text.toString()
+            var aGe = email?.text.toString()
+            var eMail = age?.text.toString()
+            var gEnder = if(male?.isChecked!!) {
+                "Male"
+            } else "Female"
 
             val intent = Intent(this,ThirdScreen::class.java).apply{
                 putExtra(NAME,nAme)
@@ -65,7 +71,9 @@ class SecondActivity : AppCompatActivity() {
                 putExtra(AGE,aGe)
                 putExtra(GENDER,gEnder)
         }
-        startActivity(intent) }}
+        startActivity(intent)
+        }
+    }
 
     private fun validate():Boolean
     {
