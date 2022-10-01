@@ -76,7 +76,6 @@ class SecondActivity : AppCompatActivity() {
         errorName?.error =null
         errorEmail?.error =null
         errorAge?.error =null
-        errorEmail?.error =null
 
         if(fullName?.text!!.isEmpty())
         {
@@ -99,8 +98,9 @@ class SecondActivity : AppCompatActivity() {
             Toast.makeText(this, "Choose your gender !", Toast.LENGTH_SHORT).show()
             return false
         }
-        if(!EMAIL_ADDRESS.matcher(email?.text!!).matches())
+        if(!EMAIL_ADDRESS.matcher(email?.text!!).matches() && fullName?.text!!.isNotEmpty())
         {
+
             errorEmail?.error="Check you email !"
             mail= false
         }
