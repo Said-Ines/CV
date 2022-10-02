@@ -88,7 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:text="Flutter"
+                android:text="@string/flutter"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 />
@@ -115,7 +115,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Language"
+            android:text="@string/language"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/colorPrimaryDark"
@@ -136,7 +136,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Arabic"
+                android:text="@string/arabic"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:layout_marginEnd="16dp"
@@ -151,7 +151,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:text="French"
+                android:text="@string/french"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp" />
 
@@ -162,7 +162,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="English"
+                android:text="@string/english"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 />
@@ -182,7 +182,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Hobbies"
+            android:text="@string/hobbies"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="10dp"
             android:textColor="@color/colorPrimaryDark"
@@ -203,7 +203,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Music"
+                android:text="@string/music"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:layout_marginEnd="16dp"
@@ -216,7 +216,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sport"
+                android:text="@string/sport"
                 android:layout_marginEnd="16dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
@@ -229,7 +229,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Games"
+                android:text="@string/games"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 />
@@ -244,7 +244,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
-        android:text="Submit"
+        android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

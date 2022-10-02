@@ -2,14 +2,16 @@ package com.example.curriculumvitae2
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.SeekBar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
 const val IOS = "100"
-const val ANDROID = "100"
-const val FLUTTER= "100"
+const val ANDROID = "none"
+const val FLUTTER= ""
 const val LANG = "lang"
 const val HOB = "hob"
 
@@ -36,6 +38,7 @@ class ThirdScreen : AppCompatActivity()
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_third_screen)
+        supportActionBar?.title = " Create Your Resume"
 
         seekBarAndroid= findViewById(R.id.SeekBarAndr)
         seekBarIos= findViewById(R.id.SeekBarIos)
@@ -60,15 +63,13 @@ class ThirdScreen : AppCompatActivity()
     {
         if(validate2())
         {
-            val skillAndroid = seekBarAndroid?.progress!!
-            val skillIos = seekBarIos?.progress!!
-            val skillFlutter = seekBarFlutter?.progress!!
+            val skillAndroid = seekBarAndroid?.progress!!.toFloat()
+            val skillIos = seekBarIos?.progress!!.toFloat()
+            val skillFlutter = seekBarFlutter?.progress!!.toFloat()
 
-
-
-            var ios = skillIos.toString()
-            var and = skillAndroid.toString()
-            var fltr= skillFlutter.toString()
+            val ios = "$skillIos"
+            val and = "$skillAndroid"
+            val fltr= "$skillFlutter"
             var lang =""
             var hob =""
 

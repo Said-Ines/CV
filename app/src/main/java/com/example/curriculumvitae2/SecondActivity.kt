@@ -14,6 +14,7 @@ const val EMAIL = "EMAIL"
 const val AGE = "age"
 const val GENDER = "GENDER"
 
+
 class SecondActivity : AppCompatActivity()
 {
     private var fullName : TextInputEditText? = null
@@ -58,10 +59,10 @@ class SecondActivity : AppCompatActivity()
         if(validate())
         {
 
-            var nAme = fullName?.text.toString()
-            var aGe = email?.text.toString()
-            var eMail = age?.text.toString()
-            var gEnder = if(male?.isChecked!!) {
+            val nAme = fullName!!.text.toString()
+            val aGe = email!!.text.toString()
+            val eMail = age!!.text.toString()
+            val gEnder = if(male?.isChecked!!) {
                 "Male"
             } else "Female"
 
