@@ -3,8 +3,9 @@ package com.example.curriculumvitae2
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns.EMAIL_ADDRESS
-import android.view.View
-import android.widget.*
+import android.widget.Button
+import android.widget.RadioButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -17,6 +18,7 @@ const val GENDER = "GENDER"
 
 class SecondActivity : AppCompatActivity()
 {
+
     private var fullName : TextInputEditText? = null
     private var email : TextInputEditText? = null
     private var age : TextInputEditText? = null
@@ -66,14 +68,13 @@ class SecondActivity : AppCompatActivity()
                 "Male"
             } else "Female"
 
-            val intent = Intent(this,FourthActivity::class.java).apply{
+            val intent = Intent(this,ThirdScreen::class.java).apply{
                 putExtra(NAME,nAme)
                 putExtra(EMAIL,eMail)
                 putExtra(AGE,aGe)
                 putExtra(GENDER,gEnder)
         }
-            val intent1 = Intent(this,ThirdScreen::class.java)
-        startActivity(intent1)
+        startActivity(intent)
         }
     }
 

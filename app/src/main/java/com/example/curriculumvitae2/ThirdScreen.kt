@@ -15,6 +15,11 @@ const val FLUTTER= ""
 const val LANG = "lang"
 const val HOB = "hob"
 
+const val NAME1 = "NAME"
+const val EMAIL1 = "EMAIL"
+const val AGE1 = "age"
+const val GENDER1 = "GENDER"
+
 class ThirdScreen : AppCompatActivity()
 {
 
@@ -53,6 +58,8 @@ class ThirdScreen : AppCompatActivity()
         sport= findViewById(R.id.sport)
         french= findViewById(R.id.french)
 
+
+
         btnSubmit!!.setOnClickListener()
         {
             clickSubmit()
@@ -63,6 +70,10 @@ class ThirdScreen : AppCompatActivity()
     {
         if(validate2())
         {
+            val name =  intent.getStringExtra(NAME).toString()
+            val age =  intent.getStringExtra(AGE).toString()
+            val email = intent.getStringExtra(EMAIL).toString()
+            val gender =  intent.getStringExtra(GENDER).toString()
             val skillAndroid = seekBarAndroid?.progress!!.toFloat()
             val skillIos = seekBarIos?.progress!!.toFloat()
             val skillFlutter = seekBarFlutter?.progress!!.toFloat()
@@ -106,6 +117,10 @@ class ThirdScreen : AppCompatActivity()
                 putExtra(FLUTTER,fltr)
                 putExtra(LANG,lang)
                 putExtra(HOB,hob)
+                putExtra(NAME1,name)
+                putExtra(EMAIL1,email)
+                putExtra(AGE1,age)
+                putExtra(GENDER1,gender)
             }
             startActivity(intent)
         }

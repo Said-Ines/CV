@@ -24,10 +24,10 @@ class FourthActivity : AppCompatActivity() {
         val lang =intent.getStringExtra(LANG).toString()
         val hob =intent.getStringExtra(HOB).toString()
 
-        val name =  intent.getStringExtra(NAME).toString()
-        val age =  intent.getStringExtra(AGE).toString()
-        val email = intent.getStringExtra(EMAIL).toString()
-        val gender =  intent.getStringExtra(GENDER).toString()
+        val name =  intent.getStringExtra(NAME1).toString()
+        val age =  intent.getStringExtra(AGE1).toString()
+        val email = intent.getStringExtra(EMAIL1).toString()
+        val gender =  intent.getStringExtra(GENDER1).toString()
 
         resume.setText("Name : $name \n Email : $email \n Age : $age \n Gender : $gender \n AndroidSkill : $skillAndroid \n IosSkill : $skillIos \n FlutterSkill : $skillFlutter \n Languages : $lang \n Hobbies : $hob ").toString()
 
