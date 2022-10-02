@@ -66,13 +66,14 @@ class SecondActivity : AppCompatActivity()
                 "Male"
             } else "Female"
 
-            val intent = Intent(this,ThirdScreen::class.java).apply{
+            val intent = Intent(this,FourthActivity::class.java).apply{
                 putExtra(NAME,nAme)
                 putExtra(EMAIL,eMail)
                 putExtra(AGE,aGe)
                 putExtra(GENDER,gEnder)
         }
-        startActivity(intent)
+            val intent1 = Intent(this,ThirdScreen::class.java)
+        startActivity(intent1)
         }
     }
 
