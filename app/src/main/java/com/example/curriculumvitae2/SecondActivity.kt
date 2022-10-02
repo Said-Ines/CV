@@ -62,8 +62,8 @@ class SecondActivity : AppCompatActivity()
         {
 
             val nAme = fullName!!.text.toString()
-            val aGe = email!!.text.toString()
-            val eMail = age!!.text.toString()
+            val eMail = email!!.text.toString()
+            val aGe = age!!.text.toString()
             val gEnder = if(male?.isChecked!!) {
                 "Male"
             } else "Female"
