@@ -31,18 +31,5 @@ class FourthActivity : AppCompatActivity() {
 
         resume.setText("Name : $name \n Email : $email \n Age : $age \n Gender : $gender \n AndroidSkill : $skillAndroid \n IosSkill : $skillIos \n FlutterSkill : $skillFlutter \n Languages : $lang \n Hobbies : $hob ").toString()
 
-
-        /*println("Name : $name")
-        println("Email : $email")
-        println("Age : $age")
-        println("Gender : $gender")
-        println("AndroidSkill : $skillAndroid")
-        println("IosSkill : $skillIos")
-        println("FlutterSkill : $skillFlutter")
-        println("Languages : $lang")
-        println("Hobbies : $hob")*/
-
-
-
     }
 }
