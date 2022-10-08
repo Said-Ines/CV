@@ -14,10 +14,12 @@ class SplachScreen : AppCompatActivity() {
 
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
-            val intent = Intent(this, SecondActivity::class.java)
+            val intent = Intent(this, FourthActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
+
+            //SecondActivity
 
     }
 }
