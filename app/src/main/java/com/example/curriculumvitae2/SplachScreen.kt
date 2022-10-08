@@ -16,6 +16,7 @@ class SplachScreen : AppCompatActivity() {
         handler.postDelayed({
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
+            finish()
         }, 3000)
 
     }
