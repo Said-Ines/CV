@@ -45,9 +45,9 @@ class ThirdScreen : AppCompatActivity()
         setContentView(R.layout.activity_third_screen)
         supportActionBar?.title = " Create Your Resume"
 
-        seekBarAndroid= findViewById(R.id.SeekBarAndr)
-        seekBarIos= findViewById(R.id.SeekBarIos)
-        seekBarFlutter= findViewById(R.id.SeekBarFlutter)
+        seekBarAndroid= findViewById(R.id.SeekBarAndr2)
+        seekBarIos= findViewById(R.id.SeekBarIos2)
+        seekBarFlutter= findViewById(R.id.SeekBarFlutter2)
 
         btnSubmit= findViewById(R.id.Submit)
 
@@ -111,18 +111,18 @@ class ThirdScreen : AppCompatActivity()
             }
 
 
-            val intent = Intent(this,FourthActivity::class.java).apply{
-                putExtra(IOS,ios)
-                putExtra(ANDROID,and)
-                putExtra(FLUTTER,fltr)
-                putExtra(LANG,lang)
-                putExtra(HOB,hob)
-                putExtra(NAME1,name)
-                putExtra(EMAIL1,email)
-                putExtra(AGE1,age)
-                putExtra(GENDER1,gender)
-            }
-            startActivity(intent)
+//            val intent = Intent(this,FourthActivity::class.java).apply{
+//                putExtra(IOS,ios)
+//                putExtra(ANDROID,and)
+//                putExtra(FLUTTER,fltr)
+//                putExtra(LANG,lang)
+//                putExtra(HOB,hob)
+//                putExtra(NAME1,name)
+//                putExtra(EMAIL1,email)
+//                putExtra(AGE1,age)
+//                putExtra(GENDER1,gender)
+//            }
+//            startActivity(intent)
         }
     }
 

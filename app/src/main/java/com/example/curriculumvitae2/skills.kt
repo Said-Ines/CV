@@ -5,11 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+
 
 /**
  * A simple [Fragment] subclass.
@@ -17,15 +18,29 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class skills : Fragment() {
-    // TODO: Rename and change types of parameters
-//    private var param1: String? = null
-//    private var param2: String? = null
+//    private  var and : Float = 0.0f
+//    private  var ios : Float = 0.0f
+//    private  var fltr : Float = 0.0f
+
+    private var seekBarAndroid: SeekBar? = null
+    private var seekBarIos: SeekBar? = null
+    private var seekBarFlutter: SeekBar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        seekBarAndroid= view?.findViewById(R.id.SeekBarAndr2)
+        seekBarIos= view?.findViewById(R.id.SeekBarIos2)
+        seekBarFlutter= view?.findViewById(R.id.SeekBarFlutter2)
+
+//        val skillAndroid = intent.getStringExtra(ANDROID).toString()
+//        val skillIos = intent.getStringExtra(IOS).toString()
+//        val skillFlutter = intent.getStringExtra(FLUTTER).toString()
+
         arguments?.let {
-//            param1 = it.getString(ARG_PARAM1)
-//            param2 = it.getString(ARG_PARAM2)
+//            and = it.getFloat(ARG_PARAM1)
+//            ios = it.getFloat(ARG_PARAM2)
+//            fltr = it.getFloat(fltr)
         }
     }
 
@@ -51,11 +66,13 @@ class skills : Fragment() {
         fun newInstance() =
             skills().apply {
                 arguments = Bundle().apply {
-//                    putString(ARG_PARAM1, param1)
-//                    putString(ARG_PARAM2, param2)
+//
                 }
             }
 
 
+
     }
+
+
 }

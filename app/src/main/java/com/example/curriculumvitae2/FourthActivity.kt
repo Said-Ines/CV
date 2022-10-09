@@ -49,21 +49,22 @@ class FourthActivity : AppCompatActivity() {
 
 
 
-
 //        resume = findViewById(R.id.resume)
 //
-//        val skillAndroid = intent.getStringExtra(ANDROID).toString()
-//        val skillIos = intent.getStringExtra(IOS).toString()
-//        val skillFlutter = intent.getStringExtra(FLUTTER).toString()
-//        val lang =intent.getStringExtra(LANG).toString()
-//        val hob =intent.getStringExtra(HOB).toString()
-//
-//        val name =  intent.getStringExtra(NAME1).toString()
-//        val age =  intent.getStringExtra(AGE1).toString()
-//        val email = intent.getStringExtra(EMAIL1).toString()
-//        val gender =  intent.getStringExtra(GENDER1).toString()
-//
-//        resume.setText("Name : $name \n Email : $email \n Age : $age \n Gender : $gender \n AndroidSkill : $skillAndroid \n IosSkill : $skillIos \n FlutterSkill : $skillFlutter \n Languages : $lang \n Hobbies : $hob ").toString()
+        val skillAndroid = intent.getStringExtra(ANDROID).toString()
+        val skillIos = intent.getStringExtra(IOS).toString()
+        val skillFlutter = intent.getStringExtra(FLUTTER).toString()
+        val lang =intent.getStringExtra(LANG).toString()
+        val hob =intent.getStringExtra(HOB).toString()
+
+        val name =  intent.getStringExtra(NAME1).toString()
+        val age =  intent.getStringExtra(AGE1).toString()
+        val email = intent.getStringExtra(EMAIL1).toString()
+        val gender =  intent.getStringExtra(GENDER1).toString()
+
+
+
+
 
     }
 }

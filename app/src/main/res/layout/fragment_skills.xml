@@ -54,7 +54,7 @@
                     android:textSize="20sp" />
 
                 <SeekBar
-                    android:id="@+id/SeekBarAndr"
+                    android:id="@+id/SeekBarAndr2"
                     android:layout_width="261dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
@@ -83,7 +83,7 @@
                     android:textSize="20sp" />
 
                 <SeekBar
-                    android:id="@+id/SeekBarIos"
+                    android:id="@+id/SeekBarIos2"
                     android:layout_width="264dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
@@ -108,7 +108,7 @@
                     android:textSize="20sp" />
 
                 <SeekBar
-                    android:id="@+id/SeekBarFlutter"
+                    android:id="@+id/SeekBarFlutter2"
                     android:layout_width="264dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="18dp"

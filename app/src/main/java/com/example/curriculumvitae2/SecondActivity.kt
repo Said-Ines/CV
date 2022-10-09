@@ -1,12 +1,23 @@
 package com.example.curriculumvitae2
 
+import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Patterns.EMAIL_ADDRESS
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -32,6 +43,15 @@ class SecondActivity : AppCompatActivity()
     private var errorEmail: TextInputLayout?=null
     private var errorAge: TextInputLayout?=null
 
+    private var userPic: ImageView?=null
+     companion object
+     {
+         const val iMAGE_REQUEST_CODE =100
+     }
+
+    private var pickedPhoto: Uri? = null
+    private  var pickedBitMap: Bitmap? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?)
     {
@@ -49,6 +69,18 @@ class SecondActivity : AppCompatActivity()
         errorName= findViewById(R.id.FullName)
         errorEmail= findViewById(R.id.Email)
         errorAge=findViewById(R.id.Age)
+
+         userPic=findViewById(R.id.UserPic)
+
+
+        userPic!!.setOnClickListener()
+        {
+            val galleryIntent=Intent(Intent.ACTION_PICK)
+            galleryIntent.type="image/*"
+            startActivityForResult(galleryIntent,iMAGE_REQUEST_CODE)
+            pickPhoto(pickedPhoto)
+        }
+
 
         btnNext!!.setOnClickListener()
         {
@@ -121,5 +153,50 @@ class SecondActivity : AppCompatActivity()
           return false
         }
         return true
+    }
+
+    fun pickPhoto(view: Uri?){
+        if(ContextCompat.checkSelfPermission(this,android.Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),1)
+        }
+        else{
+            val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            startActivityForResult(galleryIntent,2)
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+
+        if (requestCode == 1){
+            if (grantResults.isNotEmpty() && grantResults[0]==PackageManager.PERMISSION_GRANTED){
+                val galleryIntent=Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+                startActivityForResult(galleryIntent,2)
+            }
+        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if(requestCode==2 && resultCode== Activity.RESULT_OK && data != null){
+            pickedPhoto=data.data
+            if (pickedPhoto != null){
+                if (Build.VERSION.SDK_INT>=28){
+                    val source= ImageDecoder.createSource(this.contentResolver,pickedPhoto!!)
+                    pickedBitMap=ImageDecoder.decodeBitmap(source)
+                    userPic?.setImageBitmap(pickedBitMap)
+
+                }
+                else{
+                    pickedBitMap=MediaStore.Images.Media.getBitmap(this.contentResolver,pickedPhoto)
+                    userPic?.setImageBitmap(pickedBitMap)
+                }
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
