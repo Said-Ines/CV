@@ -33,15 +33,15 @@ class skills : Fragment() {
         seekBarIos= view?.findViewById(R.id.SeekBarIos2)
         seekBarFlutter= view?.findViewById(R.id.SeekBarFlutter2)
 
-//        val skillAndroid = intent.getStringExtra(ANDROID).toString()
+        seekBarAndroid?.progress=requireArguments().
 //        val skillIos = intent.getStringExtra(IOS).toString()
-//        val skillFlutter = intent.getStringExtra(FLUTTER).toString()
+//        al skillFlutter = intent.getStringExtra(FLUTTER).toString()v
 
-        arguments?.let {
+       // arguments?.let {
 //            and = it.getFloat(ARG_PARAM1)
 //            ios = it.getFloat(ARG_PARAM2)
 //            fltr = it.getFloat(fltr)
-        }
+      //  }
     }
 
     override fun onCreateView(
@@ -66,7 +66,7 @@ class skills : Fragment() {
         fun newInstance() =
             skills().apply {
                 arguments = Bundle().apply {
-//
+
                 }
             }
 
