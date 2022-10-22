@@ -1,11 +1,12 @@
-package com.example.curriculumvitae2
+package com.example.curriculumvitae2.Fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
+import androidx.fragment.app.Fragment
+import com.example.curriculumvitae2.R
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -18,9 +19,7 @@ import android.widget.SeekBar
  * create an instance of this fragment.
  */
 class skills : Fragment() {
-//    private  var and : Float = 0.0f
-//    private  var ios : Float = 0.0f
-//    private  var fltr : Float = 0.0f
+
 
     private var seekBarAndroid: SeekBar? = null
     private var seekBarIos: SeekBar? = null
@@ -29,19 +28,19 @@ class skills : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+
         seekBarAndroid= view?.findViewById(R.id.SeekBarAndr2)
         seekBarIos= view?.findViewById(R.id.SeekBarIos2)
         seekBarFlutter= view?.findViewById(R.id.SeekBarFlutter2)
 
-        seekBarAndroid?.progress=requireArguments().
-//        val skillIos = intent.getStringExtra(IOS).toString()
-//        al skillFlutter = intent.getStringExtra(FLUTTER).toString()v
 
-       // arguments?.let {
-//            and = it.getFloat(ARG_PARAM1)
-//            ios = it.getFloat(ARG_PARAM2)
-//            fltr = it.getFloat(fltr)
-      //  }
+
+
+
+//     arguments?.let{
+//
+//
+//     }
     }
 
     override fun onCreateView(
@@ -52,23 +51,15 @@ class skills : Fragment() {
         return inflater.inflate(R.layout.fragment_skills, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment skills.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance() =
-            skills().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
+//    companion object {
+//        fun newInstance() =
+//            skills().apply {
+//                arguments = Bundle().apply {
+//                              Int skillAndroid
+//                             skillIos
+//                            skillFlutte
+//                }
+//            }
 
 
 

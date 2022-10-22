@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    tools:context=".FourthActivity"
+    tools:context=".activitys.FourthActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -93,8 +93,8 @@
         android:orientation="vertical">
 
         <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/Skills_fragment"
-            android:name="com.example.curriculumvitae2.skills"
+            android:id="@+id/fragment"
+            android:name="com.example.curriculumvitae2.Fragments.skills"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_skills" />

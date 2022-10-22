@@ -1,4 +1,4 @@
-package com.example.curriculumvitae2
+package com.example.curriculumvitae2.activitys
 
 import android.app.Activity
 import android.content.Intent
@@ -10,7 +10,6 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Patterns.EMAIL_ADDRESS
-import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
@@ -18,6 +17,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.curriculumvitae2.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -77,7 +77,7 @@ class SecondActivity : AppCompatActivity()
         {
             val galleryIntent=Intent(Intent.ACTION_PICK)
             galleryIntent.type="image/*"
-            startActivityForResult(galleryIntent,iMAGE_REQUEST_CODE)
+            startActivityForResult(galleryIntent, iMAGE_REQUEST_CODE)
             pickPhoto(pickedPhoto)
         }
 
@@ -100,7 +100,7 @@ class SecondActivity : AppCompatActivity()
                 "Male"
             } else "Female"
 
-            val intent = Intent(this,ThirdScreen::class.java).apply{
+            val intent = Intent(this, ThirdScreen::class.java).apply{
                 putExtra(NAME,nAme)
                 putExtra(EMAIL,eMail)
                 putExtra(AGE,aGe)

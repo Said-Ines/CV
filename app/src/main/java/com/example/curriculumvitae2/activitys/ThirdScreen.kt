@@ -1,13 +1,16 @@
-package com.example.curriculumvitae2
+package com.example.curriculumvitae2.activitys
 
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.curriculumvitae2.R
 
+const val USER_DATA = "USER DATA"
 
 const val IOS = "100"
 const val ANDROID = "none"
@@ -19,6 +22,8 @@ const val NAME1 = "NAME"
 const val EMAIL1 = "EMAIL"
 const val AGE1 = "age"
 const val GENDER1 = "GENDER"
+
+const val IS_REMEMBRED = "IS_REMEMBRED"
 
 class ThirdScreen : AppCompatActivity()
 {
@@ -35,6 +40,10 @@ class ThirdScreen : AppCompatActivity()
     private var sport : CheckBox? = null
     private var games : CheckBox? = null
     private var french : CheckBox? = null
+
+    private var rememberMe : CheckBox? = null
+
+    lateinit var mSharedPref: SharedPreferences
 
 
 
@@ -58,13 +67,24 @@ class ThirdScreen : AppCompatActivity()
         sport= findViewById(R.id.sport)
         french= findViewById(R.id.french)
 
+        rememberMe= findViewById(R.id.RememberMe)
+
+        mSharedPref = getSharedPreferences(USER_DATA, MODE_PRIVATE);
+
+
+
+
 
 
         btnSubmit!!.setOnClickListener()
         {
             clickSubmit()
         }
+
+
     }
+
+
 
     private fun clickSubmit()
     {
@@ -110,6 +130,10 @@ class ThirdScreen : AppCompatActivity()
                 hob+=" Games"
             }
 
+            if (mSharedPref.getBoolean(IS_REMEMBRED, false)){
+                navigate()
+            }
+
 
 //            val intent = Intent(this,FourthActivity::class.java).apply{
 //                putExtra(IOS,ios)
@@ -128,6 +152,15 @@ class ThirdScreen : AppCompatActivity()
 
     private fun validate2():Boolean
     {
+        if (rememberMe!!.isChecked){
+            //TODO 4 "Edit the SharedPreferences by putting all the data"
+            mSharedPref.edit().apply{
+                putBoolean(IS_REMEMBRED, true)
+                putInt(ANDROID, seekBarAndroid!!.progress)
+                putInt(IOS, seekBarIos!!.progress)
+                putInt(FLUTTER, seekBarFlutter!!.progress)
+                putBoolean(IS_REMEMBRED, true)
+            }.apply()}
         if(!arabic?.isChecked!! && !english?.isChecked!! && !french?.isChecked!! )
         {
             Toast.makeText(this, "Choose one language at least !", Toast.LENGTH_SHORT).show()
@@ -139,5 +172,11 @@ class ThirdScreen : AppCompatActivity()
             return false
         }
       return true
+    }
+
+    private fun navigate()
+    {
+        val mainIntent = Intent(this, FourthActivity::class.java)
+        startActivity(mainIntent)
     }
 }

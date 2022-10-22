@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ThirdScreen">
+    tools:context=".activitys.ThirdScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -237,13 +237,22 @@
 
     </LinearLayout>
 
+    <CheckBox
+        android:id="@+id/RememberMe"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="25dp"
+        android:text="Remember Me"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp" />
+
     <Button
         android:id="@+id/Submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

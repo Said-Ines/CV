@@ -1,10 +1,11 @@
-package com.example.curriculumvitae2
+package com.example.curriculumvitae2.activitys
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.appcompat.app.AppCompatActivity
+import com.example.curriculumvitae2.R
 
 
 class SplachScreen : AppCompatActivity() {
